@@ -8,4 +8,6 @@ Rails.application.routes.draw do
 
   get "movies" => "movies#all_movies"
 
+  get "first_movie" => "movies#first_movie"
+
 end
