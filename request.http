@@ -1,0 +1,7 @@
+### Query request
+POST http://localhost:3000/actor?id=5
+Content-Type: application/json
+
+### Wildcard request
+POST http://localhost:3000/actor/7
+Content-Type: application/json
