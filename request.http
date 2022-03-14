@@ -1,7 +1,51 @@
-### Query request
-POST http://localhost:3000/actor?id=5
+### GET actor index
+GET http://localhost:3000/actors
+
+### GET actor show
+GET http://localhost:3000/actors/5
+
+### POST actor create
+POST http://localhost:3000/actors
 Content-Type: application/json
 
-### Wildcard request
-POST http://localhost:3000/actor/7
+{
+  "first_name": "Jet",
+  "last_name": "Li",
+  "known_for": "The One"
+}
+
+### PATCH actor update
+PATCH http://localhost:3000/actors/7
 Content-Type: application/json
+
+{
+  "known_for": "The Fifth Element"
+}
+
+### DELETE actor destroy
+DELETE http://localhost:3000/actors/8
+
+### GET movie index
+GET http://localhost:3000/movies
+
+### GET movie show
+GET http://localhost:3000/movies/5
+
+### POST movie create
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+ 
+}
+
+### PATCH movie update
+PATCH http://localhost:3000/movies/7
+Content-Type: application/json
+
+{
+  
+}
+
+### DELETE movie destroy
+DELETE http://localhost:3000/movies/8
