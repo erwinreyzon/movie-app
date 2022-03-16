@@ -15,11 +15,12 @@ Content-Type: application/json
 }
 
 ### PATCH actor update
-PATCH http://localhost:3000/actors/7
+PATCH http://localhost:3000/actors/5
 Content-Type: application/json
 
 {
-  "known_for": "The Fifth Element"
+  "gender": "male",
+  "age": 40
 }
 
 ### DELETE actor destroy
