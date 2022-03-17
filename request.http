@@ -9,9 +9,9 @@ POST http://localhost:3000/actors
 Content-Type: application/json
 
 {
-  "first_name": "Jet",
-  "last_name": "Li",
-  "known_for": "The One"
+  "first_name": "J",
+  "last_name": "L",
+  "age": 11
 }
 
 ### PATCH actor update
@@ -19,8 +19,7 @@ PATCH http://localhost:3000/actors/5
 Content-Type: application/json
 
 {
-  "gender": "male",
-  "age": 40
+  "age": 9
 }
 
 ### DELETE actor destroy
