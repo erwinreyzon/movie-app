@@ -36,9 +36,7 @@ POST http://localhost:3000/movies
 Content-Type: application/json
 
 {
- "title": "Stuff and stuff",
- "year": 2022,
- "plot": "its about stuff and stuff"
+ "plot": "one"
 }
 
 ### PATCH movie update
@@ -46,7 +44,7 @@ PATCH http://localhost:3000/movies/4
 Content-Type: application/json
 
 {
-  "director": "Christopher Nolan"
+  "plot": "c"
 }
 
 ### DELETE movie destroy
