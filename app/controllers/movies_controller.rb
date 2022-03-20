@@ -11,14 +11,13 @@ class MoviesController < ApplicationController
   # end
 
   def index
-    movies = Movie.all
-    render json: movies.as_json
+    @movies = Movie.all
+    render template: "movies/index"
   end
 
   def show
-    movie_id = params[:id]
-    movie = Movie.find_by(id: movie_id)
-    render json: movie .as_json
+    @movie = Movie.find_by(id: params[:id])
+    render template: "movies/show"
   end
 
   def create
@@ -26,26 +25,26 @@ class MoviesController < ApplicationController
       title: params["title"],
       year: params["year"],
       plot: params["plot"],
-      english: params["director"],
+      director: params["director"],
       english: params["english"]
     )
+    @movie = movie
     if movie.save
-      render json: movie.as_json
+      render template: "movies/show"
     else
       render json: {errors: movie.errors.full_messages}, status: 422
     end
   end
 
   def update
-    movie_id = params[:id]
-    movie = Movie.find_by(id: movie_id)
-    movie.title = params["title"] || movie.title
-    movie.year = params["year"] || movie.year
-    movie.plot = params["plot"] || movie.plot
-    movie.director = params["director"] || movie.director
-    movie.english = params["english"] || movie.english
-    if movie.save
-      render json: movie.as_json
+    @movie = Movie.find_by(id: params[:id])
+    @movie.title = params["title"] || @movie.title
+    @movie.year = params["year"] || @movie.year
+    @movie.plot = params["plot"] || @movie.plot
+    @movie.director = params["director"] || @movie.director
+    @movie.english = params["english"] || @movie.english
+    if @movie.save
+      render template: "movies/show"
     else
       render json: {error: movie.errors.full_messages}, status: 422
     end
