@@ -19,7 +19,9 @@ PATCH http://localhost:3000/actors/5
 Content-Type: application/json
 
 {
-  "age": 9
+  "movie_id": 10,
+  "age": 45,
+  "gender": "male"
 }
 
 ### DELETE actor destroy
