@@ -20,14 +20,13 @@ class ActorsController < ApplicationController
   # end
 
   def index
-    actors = Actor.all
-    render json: actors.as_json
+    @actors = Actor.all
+    render template: "actors/index"
   end
 
   def show
-    actor_id = params[:id]
-    actor = Actor.find_by(id: actor_id)
-    render json: actor.as_json
+    @actor = Actor.find_by(id: params[:id])
+    render template: "actors/show"
   end
 
   def create
@@ -35,8 +34,8 @@ class ActorsController < ApplicationController
       first_name: params["first_name"],
       last_name: params["last_name"],
       known_for: params["known_for"],
-      known_for: params["gender"],
-      known_for: params["age"],
+      gender: params["gender"],
+      age: params["age"],
       movie_id: params["movie_id"]
     )
     if actor.save
