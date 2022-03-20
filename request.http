@@ -5,23 +5,24 @@ GET http://localhost:3000/actors
 GET http://localhost:3000/actors/5
 
 ### POST actor create
-POST http://localhost:3000/actors
+POST http://localhost:3000/actors.json
 Content-Type: application/json
 
 {
-  "first_name": "J",
-  "last_name": "L",
-  "age": 11
+  "first_name": "Emma",
+  "last_name": "Stone",
+  "known_for": "Easy A",
+  "gender": "female",
+  "age": 30,
+  "movie_id": 11
 }
 
 ### PATCH actor update
-PATCH http://localhost:3000/actors/5
+PATCH http://localhost:3000/actors/9.json
 Content-Type: application/json
 
 {
-  "movie_id": 10,
-  "age": 45,
-  "gender": "male"
+  "movie_id": 10
 }
 
 ### DELETE actor destroy
