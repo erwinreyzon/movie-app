@@ -4,6 +4,7 @@
     title: movie.title,
     year: movie.year,
     plot: movie.plot,
+    genre: movie.genres,
     director: movie.director,
     english: movie.english,
     created_at: movie.created_at,
