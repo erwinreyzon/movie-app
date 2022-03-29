@@ -50,6 +50,15 @@ Content-Type: application/json
   "plot": "c"
 }
 
+### POST movie genre
+POST http://localhost:3000/movie_genres
+Content-Type: application/json
+
+{
+  "movie_id": ,
+  "genre_id":
+}
+
 ### DELETE movie destroy
 DELETE http://localhost:3000/movies/7
 
