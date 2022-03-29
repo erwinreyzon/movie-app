@@ -55,8 +55,8 @@ POST http://localhost:3000/movie_genres
 Content-Type: application/json
 
 {
-  "movie_id": ,
-  "genre_id":
+  "movie_id": 1,
+  "genre_id": 1
 }
 
 ### DELETE movie destroy
